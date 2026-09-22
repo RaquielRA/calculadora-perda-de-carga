@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/* Estilos de transição e scrollbar customizada */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Otimização especial para Exportação em Impressão / PDF */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+
+  header,
+  footer,
+  aside,
+  section:first-of-type,
+  .action-col,
+  #btn-load-exercise,
+  #btn-print,
+  #btn-clear-all {
+    display: none !important;
+  }
+
+  #print-header {
+    display: block !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .lg\:col-span-8 {
+    width: 100% !important;
+  }
+
+  .bg-white,
+  .bg-slate-50,
+  .bg-slate-900 {
+    background: transparent !important;
+    color: #000000 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  table {
+    width: 100% !important;
+    border: 1px solid #94a3b8 !important;
+    margin-top: 10px !important;
+  }
+
+  th, td {
+    border: 1px solid #cbd5e1 !important;
+    padding: 6px 8px !important;
+  }
+
+  th {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+  }
+}
